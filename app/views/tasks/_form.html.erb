@@ -2,7 +2,7 @@
   <% if task.errors.any? %>
     <div id="error_explanation">
       <ul>
-        <% task.errors.full_tasks.each do |tsk| %>
+        <% task.errors.full_messages.each do |tsk| %>
           <li><%= tsk %></li>
         <% end %>
       </ul>
@@ -12,7 +12,7 @@
   <%= f.label :content, 'タスク' %>
   <%= f.text_field :content %>
   <%= f.label :status, '詳細' %>
-  <%= f.text_field :content %>
+  <%= f.text_field :status %>
 
   <%= f.submit '追加' %>
 <% end %>
